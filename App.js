@@ -1,9 +1,9 @@
-import React from 'react';
 import { StyleSheet, Text, View, ViewComponent } from 'react-native';
 import { Video } from 'expo-av';
 import { DangerZone } from 'expo';
 import Constants from 'expo-constants';
 import { Dimensions } from 'react-native';
+import { Image } from 'react-native';
 
 export default function App() {
   
@@ -11,6 +11,10 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.topbar}>
           <Text>인생역전 뮤직게임쇼로또싱어</Text>
+          <Image
+            style={{flex: 1}}
+            source={require('./png/title.png')}
+          />
       </View>
       <View style={styles.main}>
         <View style={styles.searchbox}>
@@ -48,29 +52,31 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   topbar: {
-    height : 100,
-    //flex: 1,
+    //height : 100,
+    flex: 5,
     backgroundColor: 'gray',
   },
   main: {
-    flex: 1,
+    flex: 35,
     backgroundColor: 'gray',
     alignItems: 'stretch',
   },
   searchbox: {
-    height: 60,
+    //height: 60,
+    flex: 3,
     backgroundColor: 'white',
   },
   listbox: {
-    flex: 1,
-    //padding: 20,
+    flex: 19,
+    padding: 20,
     flexDirection: 'column',
     backgroundColor: 'lightgray',
     alignItems: 'stretch',
 
   },
   bottombar: {
-    height: 100,
+    //height: 100,
+    flex: 5,
     backgroundColor: 'gray',
     borderTopWidth: 1,
     borderTopColor: 'black',
